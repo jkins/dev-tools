@@ -48,6 +48,10 @@ box. This is useful for development purposes, where the code you're editing
 lives on your host and needs to get to the VM for execution. Run `vagrant rsync`
 to update the contents of `/home/vagrant/ozp` in the VM
 
+## Microsoft Windows
+If you are running Windows edit initial_provisioning.sh and uncomment the line
+regarding WINDOWS_HOST. 
+
 ## Details
 ozp-rest is run under Tomcat, using an actual MySQL database and Elasticsearch
 instance (as opposed to the in-memory versions often used in development). The

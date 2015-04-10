@@ -1,6 +1,19 @@
 #!/usr/bin/env bash
 
+# Uncomment line below if you are running Windows
+#WINDOWS_HOST=true
+
 HOMEDIR=/home/vagrant
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#       Force Vagrant and Host to preallocate space (Windows Hosts only) 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+if [ -n "$WINDOWS_HOST" ]; then
+  head -c 4096M /dev/urandom > force_preallocation
+  rm force_preallocation
+  printf "\n******************\nfinished disk prealloc\n******************\n"
+fi
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #			Install and configure build dependencies
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
