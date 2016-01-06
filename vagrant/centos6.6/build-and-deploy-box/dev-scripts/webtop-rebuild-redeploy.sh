@@ -30,6 +30,8 @@ export CI=true
 cd ${RSYNC_DIR}/ozp-webtop
 rm -rf node_modules
 rm -rf vendor
+source ${HOMEDIR}/.nvm/nvm.sh
+nvm use default
 npm install
 bower install
 npm run build

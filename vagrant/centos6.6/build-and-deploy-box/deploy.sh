@@ -57,6 +57,9 @@ sed -i "s/http:\/\/ozone-development.github.io\/ozp-demo/https:\/\/${HOST_IP}:77
 sed -i "s/http:\/\/ozone-development.github.io\/iwc\/owf7adapter.html?url=http%3A%2F%2Fozone-development.github.io%2Fozp-demo/https:\/\/${HOST_IP}:7799\/iwc\/owf7adapter.html?url=https%3A%2F%2F${HOST_IP}%3A7799%2Fdemo_apps/g" postman/data/modifiedListingData.json
 printf "Sleeping for 2 minutes waiting for server to start"
 sleep 2m
+
+source ${HOMEDIR}/.nvm/nvm.sh
+nvm use default
 newman -k -c postman/createSampleMetaData.json -e postman/env/localDev.json
 newman -k -c postman/createSampleListings.json -e postman/env/localDev.json -n 34 -d postman/data/modifiedListingData.json
 printf "\n*****************\n  Finished deploying backend \n*****************\n"

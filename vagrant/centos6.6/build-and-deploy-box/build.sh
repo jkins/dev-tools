@@ -39,6 +39,9 @@ printf "\n**************\n  finished cloning front-end repos \n*************\n"
 # http://stackoverflow.com/questions/22387857/stop-bower-from-asking-for-statistics-when-installing
 export CI=true
 
+source ${HOMEDIR}/.nvm/nvm.sh
+nvm use default
+
 # - - - - - - - - - - - - - - - - - - -
 # 				Webtop
 # - - - - - - - - - - - - - - - - - - -

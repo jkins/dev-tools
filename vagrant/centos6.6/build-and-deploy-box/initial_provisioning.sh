@@ -15,7 +15,11 @@ sudo yum install kernel-headers kernel-devel -y
 printf "\n*************\n finished installing kernel headers \n*************\n"
 sudo yum install java-1.7.0-openjdk java-1.7.0-openjdk-devel git unzip vim -y
 printf "\n**************\n finished installing java and such \n**************\n"
-sudo yum install nodejs npm -y
+sudo yum install gcc-c++ -y
+curl -s https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash
+source ${HOMEDIR}/.nvm/nvm.sh
+nvm install 0.12
+nvm alias default node
 printf "\n**************\nfinished installing nodejs and npm\n**************\n"
 # install sdkman
 curl -s get.sdkman.io | bash
@@ -70,7 +74,7 @@ sudo yum remove mysql mysql-* -y
 sudo yum --enablerepo=remi,remi-test install mysql mysql-server tomcat elasticsearch nginx multitail -y
 
 # Install newman (for adding test data)
-sudo npm install -g newman bower
+npm install -g newman bower
 
 printf "\n***************\nfinished deployment installation\n***************\n"
 

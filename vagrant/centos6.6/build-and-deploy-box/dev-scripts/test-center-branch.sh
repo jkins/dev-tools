@@ -35,6 +35,8 @@ git checkout ${BRANCH_NAME} | tee -a ${OUTPUT_FILE}
 export CI=true
 rm -rf node_modules
 rm -rf bower_components
+source ${HOMEDIR}/.nvm/nvm.sh
+nvm use default
 npm install | tee -a ${OUTPUT_FILE}
 bower install | tee -a ${OUTPUT_FILE}
 npm run build | tee -a ${OUTPUT_FILE}
