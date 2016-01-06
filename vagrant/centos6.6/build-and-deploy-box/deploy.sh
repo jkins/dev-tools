@@ -87,7 +87,7 @@ sudo tar -C ${STATIC_DEPLOY_DIR}/demo_apps -xzf ${PACKAGE_DIR}/demo_apps.tar.gz 
 # IWC
 sudo sed -i "0,/\(ozpIwc\.apiRootUrl=\).*/s//\1'https:\/\/${HOST_IP}:7799\/marketplace\/api'/" ${STATIC_DEPLOY_DIR}/iwc/iframe_peer.html
 sudo sed -i "0,/\(ozpIwc\.apiRootUrl=\).*/s//\1'https:\/\/${HOST_IP}:7799\/marketplace\/api'/" ${STATIC_DEPLOY_DIR}/iwc/intentsChooser.html
-sudo sed -i "0,/\(ozpIwc\.apiRootUrl=\).*/s//\1'https:\/\/${HOST_IP}:7799\/marketplace\/api'/" ${STATIC_DEPLOY_DIR}/iwc/debugger.html
+sudo sed -i "0,/\(ozpIwc\.apiRootUrl=\).*/s//\1'https:\/\/${HOST_IP}:7799\/marketplace\/api'/" ${STATIC_DEPLOY_DIR}/iwc/debugger/index.html
 
 
 # Center

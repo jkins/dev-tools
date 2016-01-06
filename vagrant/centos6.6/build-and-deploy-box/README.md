@@ -8,9 +8,9 @@ depending on your setup):
 * [Center](https://localhost:7799/center)
 * [HUD](https://localhost:7799/hud)
 * [Webtop](https://localhost:7799/webtop)
-* [IWC (debugger)](https://localhost:7799/iwc/debugger.html)
+* [IWC (debugger)](https://localhost:7799/iwc/debugger/index.html)
 * [Demo Apps](https://localhost:7799/demo_apps)
-* [HAL Browser](https://localhost:7799/iwc/debugger.html#hal-browser/https://localhost:5443/marketplace/api)
+* [HAL Browser](https://localhost:7799/iwc/debugger/index.html/#hal-browser/https://localhost:5443/marketplace/api)
 * [Tomcat web UI](http://localhost:5808/manager/html/) (username: tomcat, password: password)
 
 Basic Authentication is used to access the OZP applications above. Use any of
